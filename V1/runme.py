@@ -13,6 +13,10 @@ import subprocess
 #     subprocess.run(["ipconfig", "/all"])
 # ipconfig()
 
-def hostname():
-    subprocess.run(["hostname"])
-hostname()
+# def hostname():
+#     subprocess.run(["hostname"])
+# hostname()
+
+def getmac():
+    subprocess.run(["getmac"])
+getmac()
