@@ -21,6 +21,11 @@ import subprocess
 #     subprocess.run(["getmac"])
 # getmac()
 
-def arp():
-    subprocess.run(["arp", "-a"])
-arp()
+# def arp():
+#     subprocess.run(["arp", "-a"])
+# arp()
+
+def tracert():
+    a=input("Enter the IP address or domain to trace: ")
+    subprocess.run(["tracert", a])
+tracert()
