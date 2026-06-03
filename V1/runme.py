@@ -8,6 +8,11 @@ import subprocess
 #     a=input("Enter the IP address or domain to ping: ")
 #     subprocess.run(["ping", a])
 # ping()
-def ipconfig():
-    subprocess.run(["ipconfig", "/all"])
-ipconfig()
+
+# def ipconfig():
+#     subprocess.run(["ipconfig", "/all"])
+# ipconfig()
+
+def hostname():
+    subprocess.run(["hostname"])
+hostname()
