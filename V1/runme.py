@@ -1,44 +1,61 @@
 print("Hello, welcome to NetPulse!")
 print("Following Commands will be run on your system - Make sure you have the Internet Connection!!\n")
 
-print("ping : \nipconfig /all : \nhostname : \ngetmac : \narp -a : \ntracert : \nnslookup : \nnetstat -a : \nroute print : \n")
+print("Command 1 - ping\nCommand 2 - ipconfig /all\nCommand 3 - hostname\nCommand 4 - getmac\nCommand 5 - arp -a\nCommand 6 - tracert\nCommand 7 - nslookup\nCommand 8 - netstat -a\nCommand 9 - route print\n")
 
 import subprocess
-# def ping():
-#     a=input("Enter the IP address or domain to ping: ")
-#     subprocess.run(["ping", a])
-# ping()
 
-# def ipconfig():
-#     subprocess.run(["ipconfig", "/all"])
-# ipconfig()
+def ping():
+    a=input("Enter the IP address or domain to ping: ")
+    subprocess.run(["ping", a])
 
-# def hostname():
-#     subprocess.run(["hostname"])
-# hostname()
+def ipconfig():
+    subprocess.run(["ipconfig", "/all"])
 
-# def getmac():
-#     subprocess.run(["getmac"])
-# getmac()
+def hostname():
+    subprocess.run(["hostname"])
 
-# def arp():
-#     subprocess.run(["arp", "-a"])
-# arp()
+def getmac():
+    subprocess.run(["getmac"])
 
-# def tracert():
-#     a=input("Enter the IP address or domain to trace: ")
-#     subprocess.run(["tracert", a])
-# tracert()
+def arp():
+    subprocess.run(["arp", "-a"])
 
-# def nslookup():
-#     a=input("Enter the IP address or domain to look up: ")
-#     subprocess.run(["nslookup", a])
-# nslookup()
+def tracert():
+    a=input("Enter the IP address or domain to trace: ")
+    subprocess.run(["tracert", a])
 
-# def netstat():
-#     subprocess.run(["netstat", "-a"])
-# netstat()
+def nslookup():
+    a=input("Enter the IP address or domain to look up: ")
+    subprocess.run(["nslookup", a])
+
+def netstat():
+    subprocess.run(["netstat", "-a"])
 
 def route_print():
     subprocess.run(["route", "print"])
-route_print()
+
+
+def mainfun():
+    n=int(input("Enter the command number to run: "))
+    if n==1:
+        ping()
+    elif n==2:
+        ipconfig()
+    elif n==3:
+        hostname()
+    elif n==4:
+        getmac()
+    elif n==5:
+        arp()
+    elif n==6:
+        tracert()
+    elif n==7:
+        nslookup()
+    elif n==8:
+        netstat()
+    elif n==9:
+        route_print()
+    else:
+        print("Invalid command number. Please try again.")
+mainfun()
