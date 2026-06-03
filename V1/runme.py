@@ -17,6 +17,10 @@ import subprocess
 #     subprocess.run(["hostname"])
 # hostname()
 
-def getmac():
-    subprocess.run(["getmac"])
-getmac()
+# def getmac():
+#     subprocess.run(["getmac"])
+# getmac()
+
+def arp():
+    subprocess.run(["arp", "-a"])
+arp()
