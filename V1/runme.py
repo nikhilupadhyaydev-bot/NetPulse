@@ -1,3 +1,6 @@
+text = "--NetPulse--"
+print(text.center(20))
+
 print("Hello, welcome to NetPulse!")
 print("Following Commands will be run on your system - Make sure you have the Internet Connection!!\n")
 
@@ -35,27 +38,37 @@ def netstat():
 def route_print():
     subprocess.run(["route", "print"])
 
-
 def mainfun():
-    n=int(input("Enter the command number to run: "))
-    if n==1:
-        ping()
-    elif n==2:
-        ipconfig()
-    elif n==3:
-        hostname()
-    elif n==4:
-        getmac()
-    elif n==5:
-        arp()
-    elif n==6:
-        tracert()
-    elif n==7:
-        nslookup()
-    elif n==8:
-        netstat()
-    elif n==9:
-        route_print()
-    else:
-        print("Invalid command number. Please try again.")
+    while True:
+        
+        while True:
+            try:
+                n = int(input("\nEnter the command number to run (or 0 to exit): "))
+                break
+            except ValueError:
+                print("Please enter a valid integer.")
+
+        if n==0:
+            print("Exiting NetPulse. Goodbye!")
+            break
+        elif n==1:
+            ping()
+        elif n==2:
+            ipconfig()
+        elif n==3:
+            hostname()
+        elif n==4:
+            getmac()
+        elif n==5:
+            arp()
+        elif n==6:
+            tracert()
+        elif n==7:
+            nslookup()
+        elif n==8:
+            netstat()
+        elif n==9:
+            route_print()
+        else:
+            print("Invalid command number. Please try again.")
 mainfun()
