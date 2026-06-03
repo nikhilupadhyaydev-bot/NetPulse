@@ -1,5 +1,10 @@
-text = "--NetPulse--"
-print(text.center(20))
+def banner():
+    print("\n" * 2)
+    print("=" * 40)
+    print("NetPulse - Network Diagnostics Toolkit")
+    print("=" * 40)
+    print("\n" * 2)
+banner()
 
 print("Hello, welcome to NetPulse!")
 print("Following Commands will be run on your system - Make sure you have the Internet Connection!!\n")
