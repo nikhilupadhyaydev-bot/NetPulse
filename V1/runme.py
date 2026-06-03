@@ -25,7 +25,12 @@ import subprocess
 #     subprocess.run(["arp", "-a"])
 # arp()
 
-def tracert():
-    a=input("Enter the IP address or domain to trace: ")
-    subprocess.run(["tracert", a])
-tracert()
+# def tracert():
+#     a=input("Enter the IP address or domain to trace: ")
+#     subprocess.run(["tracert", a])
+# tracert()
+
+def nslookup():
+    a=input("Enter the IP address or domain to look up: ")
+    subprocess.run(["nslookup", a])
+nslookup()
