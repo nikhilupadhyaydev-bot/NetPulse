@@ -30,7 +30,11 @@ import subprocess
 #     subprocess.run(["tracert", a])
 # tracert()
 
-def nslookup():
-    a=input("Enter the IP address or domain to look up: ")
-    subprocess.run(["nslookup", a])
-nslookup()
+# def nslookup():
+#     a=input("Enter the IP address or domain to look up: ")
+#     subprocess.run(["nslookup", a])
+# nslookup()
+
+def netstat():
+    subprocess.run(["netstat", "-a"])
+netstat()
