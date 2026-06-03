@@ -4,7 +4,10 @@ print("Following Commands will be run on your system - Make sure you have the In
 print("ping : \nipconfig /all : \nhostname : \ngetmac : \narp -a : \ntracert : \nnslookup : \nnetstat -a : \nroute print : \n")
 
 import subprocess
-def ping():
-    a=input("Enter the IP address or domain to ping: ")
-    subprocess.run(["ping", a])
-ping()
+# def ping():
+#     a=input("Enter the IP address or domain to ping: ")
+#     subprocess.run(["ping", a])
+# ping()
+def ipconfig():
+    subprocess.run(["ipconfig", "/all"])
+ipconfig()
