@@ -35,6 +35,10 @@ import subprocess
 #     subprocess.run(["nslookup", a])
 # nslookup()
 
-def netstat():
-    subprocess.run(["netstat", "-a"])
-netstat()
+# def netstat():
+#     subprocess.run(["netstat", "-a"])
+# netstat()
+
+def route_print():
+    subprocess.run(["route", "print"])
+route_print()
